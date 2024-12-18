@@ -30,7 +30,7 @@ in the \link{ctx} like \code{torch_tensor}s and external pointers in general.
 }
 
 \seealso{
-Other luz_save: 
+Other luz_save:
 \code{\link{luz_load}()}
 }
 \concept{luz_save}

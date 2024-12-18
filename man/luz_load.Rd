@@ -13,7 +13,7 @@ luz_load(path)
 Loads a fitted model. See documentation in \code{\link[=luz_save]{luz_save()}}.
 }
 \seealso{
-Other luz_save: 
+Other luz_save:
 \code{\link{luz_save}()}
 }
 \concept{luz_save}

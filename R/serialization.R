@@ -19,7 +19,7 @@
 #' @family luz_save
 #' @export
 luz_save <- function(obj, path, ...) {
-  ellipsis::check_dots_empty()
+  rlang::check_dots_empty()
   # dangling environments might be in the `obj` search path causing problems
   # during saving. `gc()` is a good practice to make sure they are cleaned up
   # before saving.
@@ -137,7 +137,7 @@ luz_checkpoint <- function(ctx, path) {
 #'
 #' Works with checkpoints created typically with [luz_callback_model_checkpoint()].
 #'
-#' @param obj Object to which we want to laod the checkpoint.
+#' @param obj Object to which we want to load the checkpoint.
 #' @param path Path of the checkpoint on disk.
 #' @param ... unused. Is there to allow future extensions.
 #'
@@ -191,7 +191,7 @@ luz_load_checkpoint.luz_fit_context <- function(obj, path, ...,
         cli::cli_abort(c(
           x = "Failed resuming the model.",
           i = paste0(
-            "A callback with class {.cls {class(cb)} has state attached ",
+            "A callback with class {.cls {class(cb)} has been attached ",
             "to it, but doesn't implement the {.fn load_state_dict} method."
           )
         ))
